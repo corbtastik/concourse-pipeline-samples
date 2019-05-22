@@ -87,8 +87,8 @@ jobs:
   plan:
   - get: concourse-pipeline-samples
     trigger: true
-    passed:
-      - load-tests
+    # passed:
+    #   - load-tests
   - task: get-current-app-color
     file: concourse-pipeline-samples/pipelines/appdev/blue-green-app-deployment/ci/tasks/current-app-get-info.yml
     params:
